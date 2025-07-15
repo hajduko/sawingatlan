@@ -9,7 +9,7 @@ import plan from '../../../assets/images/realestate/plan.png';
 import key from '../../../assets/icons/key.svg';
 import clipboard from '../../../assets/icons/clipboard.svg';
 
-const RealEstatePackages = () => {
+const HomePackages = () => {
   const services = [
     {
       title: 'Kulcsrakész csomag',
@@ -196,4 +196,4 @@ const RealEstatePackages = () => {
   );
 };
 
-export default RealEstatePackages;
+export default HomePackages;

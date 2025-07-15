@@ -1,7 +1,7 @@
 import { Box, Flex, Grid, GridItem, Heading, Text, Image } from '@chakra-ui/react';
 import mission from '../../../assets/images/realestate/mission.jpg';
 
-const RealEstateMission = () => {
+const HomeMission = () => {
   return (
     <Flex bg='#ebedf0' justify='center'>
       <Box w={{ base: '95%', lg: '76rem' }} mb={{ base: 12, md: 20 }} mt={{ base: 12, md: 20 }}>
@@ -43,4 +43,4 @@ const RealEstateMission = () => {
   );
 };
 
-export default RealEstateMission;
+export default HomeMission;

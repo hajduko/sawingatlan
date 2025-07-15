@@ -1,34 +1,29 @@
-import { Helmet } from 'react-helmet-async';
 import HomeHero from './components/HomeHero';
-import HomeUs from './components/HomeUs';
-import HomeServices from './components/HomeServices';
-import HomeWho from './components/HomeWho';
-import HomeTeam from './components/HomeTeam';
+import { Helmet } from 'react-helmet-async';
+import HomeMission from './components/HomeMission';
 import Footer from '../../components/footer/Footer';
-import { useLocation } from 'react-router';
-import { useEffect } from 'react';
+import HomeProcess from './components/HomeProcess';
+import HomePackages from './components/HomePackages';
+import HomeAdvantages from './components/HomeAdvantages';
+import HomeContact from './components/HomeContact';
+import Popup from '../../components/homefeedbackpopup/HomeFeedBackPopUp';
+import { useState } from 'react';
 
 const Home = () => {
-  const state = useLocation();
-  const id = state.hash || '';
-
-  useEffect(() => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [id]);
+  const [feedBackOpen, setFeedBackOpen] = useState<boolean>(false);
 
   return (
     <>
       <Helmet>
-        <title>Főoldal - Sawin Energy</title>
+        <title>Eladóknak - SaWin Energy</title>
       </Helmet>
+      <Popup open={feedBackOpen} setOpen={setFeedBackOpen} />
       <HomeHero />
-      <HomeUs />
-      <HomeServices />
-      <HomeWho />
-      <HomeTeam />
+      <HomeMission />
+      <HomeProcess />
+      <HomePackages />
+      <HomeAdvantages />
+      <HomeContact setFeedBackOpen={setFeedBackOpen} />
       <Footer />
     </>
   );

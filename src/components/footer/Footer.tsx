@@ -23,11 +23,11 @@ const Footer = () => {
               align={{ base: 'flex-start', md: 'flex-start' }}>
               <Link to='/'>
                 <Text color='white' fontSize='md' fontWeight={location.pathname === '/' ? '700' : '400'}>
-                  Főoldal
+                  Eladóknak
                 </Text>
               </Link>
-              <Link to='/realestate'>
-                <Text color='white' fontSize='md' fontWeight={location.pathname === '/realestate' ? '700' : '400'}>
+              <Link to='/foragents'>
+                <Text color='white' fontSize='md' fontWeight={location.pathname === '/foragents' ? '700' : '400'}>
                   Ingatlanosoknak
                 </Text>
               </Link>
@@ -68,7 +68,7 @@ const Footer = () => {
               px={{ base: 4, lg: 0 }}
               gap={{ base: 2, md: 0 }}>
               <Text color='white' fontSize='md'>
-                2024 - SaWin Energy © Minden jog fenntartva
+                2025 - SaWingatlan © Minden jog fenntartva
               </Text>
               <Link to='/privacy'>
                 <Text color='white' fontSize='md'>

@@ -1,15 +1,11 @@
-import { Box, Flex, Heading, IconButton, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react';
 import NavBar from '../../../components/navbar/NavBar';
 import bg from '../../../assets/images/home/hero_bg.jpg';
-import { FaArrowDown } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 
 const HomeHero = () => {
-  const scroll = () => {
-    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
-  };
-
   return (
-    <Box h={{ base: '60vh', md: '85vh' }} bgImg={`url(${bg})`} bgSize='cover'>
+    <Box h={{ base: '60vh', md: '80vh' }} bgImg={`url(${bg})`} bgSize='cover'>
       <Box h='full' w='full' bgColor='#062617B2'>
         <Flex
           h='full'
@@ -25,30 +21,47 @@ const HomeHero = () => {
           </Box>
           <Heading
             as='h1'
-            fontSize={{ base: '5xl', sm: '7xl', md: '80px', lg: '95px' }}
-            lineHeight={{ base: '60px', sm: '80px', md: '100px', lg: '130px' }}
+            fontSize={{ base: '5xl', sm: '5xl', md: '6xl', lg: '7xl' }}
+            lineHeight='150%'
             fontWeight='700'
             color='accent'
-            pl={{ base: 0, lg: 40 }}
-            textIndent={{ base: 0, lg: -40 }}
-            textAlign={{ base: 'center', lg: 'left' }}
-            wordBreak='break-all'>
-            Szabadulj a<br />
+            textAlign='center'>
+            Teremtsünk együtt új értéket
+            <br />
             <Text as='span' color='white'>
-              rezsicsapdából!
+              eladó ingatlanodnak!
             </Text>
           </Heading>
-          <IconButton
-            color='dark'
-            bgColor='accent'
-            rounded='full'
+          <Button
             size='2xl'
-            width='75px'
-            height='75px'
-            onClick={scroll}
-            zIndex={0}>
-            <FaArrowDown color='dark' />
-          </IconButton>
+            mt={4}
+            bg={'accent'}
+            w={'fit-content'}
+            rounded={'8px'}
+            pl={4}
+            pr={{ base: 4, sm: 2 }}
+            color={'dark'}
+            fontSize='lg'
+            fontWeight='600'
+            onClick={() => {
+              const element = document.getElementById('homeContact');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}>
+            Eladom az ingatlanom!
+            <Box
+              bg={'light'}
+              h={'47px'}
+              w={'47px'}
+              rounded='5px'
+              ml={4}
+              display={{ base: 'none', sm: 'flex' }}
+              alignItems='center'
+              justifyContent='center'>
+              <FaArrowRight color='dark' />
+            </Box>
+          </Button>
         </Flex>
       </Box>
     </Box>

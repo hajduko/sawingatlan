@@ -3,9 +3,9 @@ import NavBar from '../../../components/navbar/NavBar';
 import bg from '../../../assets/images/home/hero_bg.jpg';
 import { FaArrowRight } from 'react-icons/fa';
 
-const RealEstateHero = () => {
+const ForAgentsHero = () => {
   return (
-    <Box h={{ base: '60vh', md: '70vh' }} bgImg={`url(${bg})`} bgSize='cover'>
+    <Box h={{ base: '60vh', md: '90vh' }} bgImg={`url(${bg})`} bgSize='cover'>
       <Box h='full' w='full' bgColor='#062617B2'>
         <Flex
           h='full'
@@ -26,12 +26,15 @@ const RealEstateHero = () => {
             fontWeight='700'
             color='accent'
             textAlign='center'>
-            Teremtsünk együtt új értéket
+            A SaWingatlan nem
             <br />
             <Text as='span' color='white'>
-              eladó ingatlanodnak!
+              versenytárs, hanem lehetőség!
             </Text>
           </Heading>
+          <Text fontSize='lg' color='white' textAlign='center' lineHeight='tall'>
+            Támogatjuk az ingatlanközvetítők munkáját, új piacokat és magasabb értékesítést biztosítunk partnereinknek.
+          </Text>
           <Button
             size='2xl'
             mt={4}
@@ -44,12 +47,12 @@ const RealEstateHero = () => {
             fontSize='lg'
             fontWeight='600'
             onClick={() => {
-              const element = document.getElementById('realEstateContact');
+              const element = document.getElementById('agentContact');
               if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
               }
             }}>
-            Eladom az ingatlanom!
+            Csatlakozom hozzátok!
             <Box
               bg={'light'}
               h={'47px'}
@@ -68,4 +71,4 @@ const RealEstateHero = () => {
   );
 };
 
-export default RealEstateHero;
+export default ForAgentsHero;

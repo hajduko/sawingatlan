@@ -1,5 +1,5 @@
 import { Flex, Image, Text } from '@chakra-ui/react';
-import { DialogCloseTrigger, DialogContent, DialogHeader, DialogRoot } from '../../components/ui/dialog';
+import { DialogCloseTrigger, DialogContent, DialogHeader, DialogRoot } from '../ui/dialog';
 import logo from '../../assets/sawin.svg';
 
 interface Props {

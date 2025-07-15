@@ -3,7 +3,7 @@ import { Field } from '../../../components/ui/field';
 import { Button } from '../../../components/ui/button';
 import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { apiGatewayService, RealEstateFormData } from '../../../util/configs/api.config';
+import { apiGatewayService, HomeFormData } from '../../../util/configs/api.config';
 
 import mission from '../../../assets/images/realestate/mission.jpg';
 
@@ -11,18 +11,18 @@ interface Props {
   setFeedBackOpen: (value: boolean) => void;
 }
 
-const RealEstateContact = ({ setFeedBackOpen }: Props) => {
+const HomeContact = ({ setFeedBackOpen }: Props) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<RealEstateFormData>();
+  } = useForm<HomeFormData>();
   const [submitting, setSubmitting] = useState(false);
 
-  const onSubmit: SubmitHandler<RealEstateFormData> = async (data) => {
+  const onSubmit: SubmitHandler<HomeFormData> = async (data) => {
     setSubmitting(true);
     try {
-      const response = await apiGatewayService.submitRealEstateForm(data);
+      const response = await apiGatewayService.submitHomeForm(data);
 
       if (response.status === 200) {
         setFeedBackOpen(true);
@@ -37,7 +37,7 @@ const RealEstateContact = ({ setFeedBackOpen }: Props) => {
   };
 
   return (
-    <Flex bg='#ebedf0' justify='center' id='realEstateContact'>
+    <Flex bg='#ebedf0' justify='center' id='homeContact'>
       <Box w={{ base: '95%', lg: '76rem' }} mb={{ base: 12, md: 20 }} mt={{ base: 12, md: 20 }}>
         <Heading as='h2' size='md' fontWeight='600' color='primary' mb={2}>
           Kapcsolat
@@ -138,4 +138,4 @@ const RealEstateContact = ({ setFeedBackOpen }: Props) => {
   );
 };
 
-export default RealEstateContact;
+export default HomeContact;

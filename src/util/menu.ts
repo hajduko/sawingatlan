@@ -9,14 +9,14 @@ export interface IMenuItem {
 
 export const menu: IMenuItem[] = [
   {
-    name: 'Főoldal',
+    name: 'Eladóknak',
     url: '/',
     available: true,
     external: false,
   },
   {
     name: 'Ingatlanosoknak',
-    url: '/realestate',
+    url: '/foragents',
     available: true,
     external: false,
   },

@@ -5,7 +5,7 @@ import kenyelmes from '../../../assets/images/realestate/kenyelmes.svg';
 import premiumar from '../../../assets/images/realestate/premiumar.svg';
 import atlagon from '../../../assets/images/realestate/atlagon.svg';
 
-const RealEstateAdvantages = () => {
+const HomeAdvantages = () => {
   const cards = [
     {
       title: 'Gyors',
@@ -69,4 +69,4 @@ const RealEstateAdvantages = () => {
   );
 };
 
-export default RealEstateAdvantages;
+export default HomeAdvantages;
